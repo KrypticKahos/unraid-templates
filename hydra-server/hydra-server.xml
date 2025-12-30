@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>hydra-server</Name>
+  <Repository>jpeg6/hydra-server:latest</Repository>
+  <Registry>https://hub.docker.com/r/jpeg6/hydra-server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dmilin1/hydra-server/issues</Support>
+  <Project/>https://github.com/dmilin1/hydra-server</Project>
+  <ReadMe/>
+  <Overview>A backend service for the Hydra for Reddit app. Using a custom server will unlock all Hydra Pro features for free. </Overview>
+  <Category/>Tools</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>--env-file /mnt/user/appdata/hydra_server/.env</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+ <DateInstalled>1767113266</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Ensure that a .env file is located under the root directory for this docker and that the extra parameter --env-file /mnt/user/appdata/hydra_server/.env is used to specify the path. The env file should have the following values. Groq API key is optional. Generate a key with `openssl rand -hex 32`&#13;
+&#13;
+GROQ_API_KEY=your_groq_api_key_here &#13;
+ENCRYPTION_KEY=your_32_byte_encryption_key_here&#13;
+DASHBOARD_PASSWORD=your_secure_dashboard_password&#13;
+</Requires>
+  <Config Name="Container Port 1" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/hydra_server/data" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hydra_server/data</Config>
+  <Config Name="Config" Target="/app/config" Default="/mnt/user/appdata/hydra_server/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hydra_server/config</Config>
+  <Config Name="environment" Target="IS_CUSTOM_SERVER" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <TailscaleStateDir/>
+</Container>
