@@ -13,8 +13,8 @@
   <Overview>A backend service for the Hydra for Reddit app. Using a custom server will unlock all Hydra Pro features for free. </Overview>
   <Category/>Tools</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL/>
-  <Icon/>
+  <TemplateURL/>https://raw.githubusercontent.com/KrypticKahos/unraid-templates/refs/heads/main/hydra-server/hydra-server.xml</TemplateURL>
+  <Icon/>https://github.com/KrypticKahos/unraid-templates/blob/main/hydra_icon.png?raw=true</Icon>
   <ExtraParams>--env-file /mnt/user/appdata/hydra_server/.env</ExtraParams>
   <PostArgs/>
   <CPUset/>
